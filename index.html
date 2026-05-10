@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Primary Metadata -->
+    <title>Shadorux | Shadow the Hedgehog CSS Framework</title>
+    <meta name="description" content="A specialized CSS library by Shadorux. Features black and red UI components, custom glow effects, and themed animations inspired by Shadow the Hedgehog.">
+    <meta name="keywords" content="Shadorux, Shadow the Hedgehog CSS, Black and Red UI, Chaos Control CSS, Frontend Framework">
+    <meta name="author" content="Shadorux">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Icons -->
+    <link rel="icon" href="./assets/shadorux-favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="./assets/shadorux-favicon.jpg">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shadorux - Shadow the Hedgehog CSS">
+    <meta property="og:description" content="Lightweight CSS framework featuring high-contrast black and red UI elements. Developed by Shadorux.">
+    <meta property="og:image" content="./assets/shadorux-favicon.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="Shadow-The-Hedgehog-CSS">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shadorux - Shadow the Hedgehog CSS">
+    <meta name="twitter:description" content="Lightweight CSS framework featuring high-contrast black and red UI elements. Developed by Shadorux.">
+    <meta name="twitter:image" content="./assets/shadorux-favicon.jpg">
+
+    <link rel="stylesheet" href="./shadow-the-hedgehog.css">
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      main {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      .demo-stack {
+        display: grid;
+        gap: 24px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 7vw, 4.8rem);
+        line-height: 0.95;
+      }
+
+      p {
+        max-width: 62ch;
+        margin: 0;
+        color: var(--sth-muted);
+        line-height: 1.55;
+      }
+
+      code {
+        color: #ffffff;
+        font-family: "Courier New", monospace;
+        font-size: 0.92rem;
+      }
+
+      .preview-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .preview-item {
+        display: grid;
+        grid-template-columns: minmax(190px, 0.8fr) minmax(260px, 1.2fr);
+        gap: 20px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid var(--sth-edge);
+        border-radius: 4px;
+        color: var(--sth-text);
+        background:
+          linear-gradient(135deg, rgba(139, 0, 0, 0.18), transparent 36%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.34)),
+          var(--sth-void);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 0 24px rgba(139, 0, 0, 0.2);
+      }
+
+      .preview-label {
+        display: grid;
+        gap: 6px;
+      }
+
+      .preview-title {
+        margin: 0;
+        color: #ffffff;
+        font-family: var(--sth-font-display);
+        font-size: 0.95rem;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+
+      .preview-note {
+        color: var(--sth-muted);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .preview-surface {
+        min-height: 92px;
+        display: grid;
+        align-items: center;
+        justify-items: start;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--sth-edge);
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.48);
+      }
+
+      .preview-surface p {
+        max-width: 34rem;
+      }
+
+      .ark-sample {
+        width: min(100%, 320px);
+        min-height: 88px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--sth-edge);
+        border-radius: 4px;
+        font-family: var(--sth-font-display);
+        font-style: italic;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 720px) {
+        .preview-item {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="shadow-the-hedgehog-css dark-ark-gradient">
+    <main class="demo-stack">
+      <section>
+        <h1 class="ultimate-lifeform-text">Shadow-The-Hedgehog-CSS</h1>
+        <p>Created by Shadorux. Shadow the hedgehog CSS for ALLLLLLLL the shadow fans out there &gt;:D</p>
+      </section>
+
+      <section class="preview-list" aria-label="CSS class preview list">
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Ultimate Button</h2>
+            <code>.ultimate-button</code>
+            <span class="preview-note">Chaos Control aura with a clean hover lift.</span>
+          </div>
+          <div class="preview-surface">
+            <button class="ultimate-button" type="button">Chaos Control</button>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Lifeform Text</h2>
+            <code>.ultimate-lifeform-text</code>
+            <span class="preview-note">Text with red outer glow.</span>
+          </div>
+          <div class="preview-surface">
+            <span class="ultimate-lifeform-text">Ultimate Lifeform</span>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Chaos Badge</h2>
+            <code>.chaos-badge</code>
+            <span class="preview-note">Small crimson status marker for labels and tags.</span>
+          </div>
+          <div class="preview-surface">
+            <span class="chaos-badge">Ultimate Lifeform</span>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Chaos Input</h2>
+            <code>.chaos-input</code>
+            <span class="preview-note">Black input with red stroke.</span>
+          </div>
+          <div class="preview-surface">
+            <input class="chaos-input" type="text" placeholder="Enter chaos emerald code">
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Chaos Alert</h2>
+            <code>.chaos-alert</code>
+            <span class="preview-note">A red-edged message block for warnings or callouts.</span>
+          </div>
+          <div class="preview-surface">
+            <div class="chaos-alert">
+              <strong>Chaos Alert</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Chaos Link</h2>
+            <code>.chaos-link</code>
+            <span class="preview-note">Glowing red underline treatment for links.</span>
+          </div>
+          <div class="preview-surface">
+            <p><a class="chaos-link" href="#">Activate Chaos Control</a></p>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">ARK Divide</h2>
+            <code>.ark-divider</code>
+            <span class="preview-note">Thin red section divide.</span>
+          </div>
+          <div class="preview-surface">
+            <hr class="ark-divider">
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Shadow Stat</h2>
+            <code>.shadow-stat</code>
+            <span class="preview-note">Stat box with red frame and black and red gradient.</span>
+          </div>
+          <div class="preview-surface">
+            <div class="shadow-stat">
+              <span class="shadow-stat-label">Chaos Power</span>
+              <span class="shadow-stat-value">99%</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="preview-item">
+          <div class="preview-label">
+            <h2 class="preview-title">Dark ARK Gradient</h2>
+            <code>.dark-ark-gradient</code>
+            <span class="preview-note">Black-to-grey background with red scanlines.</span>
+          </div>
+          <div class="preview-surface">
+            <div class="dark-ark-gradient ark-sample">ARK Surface</div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
